@@ -61,11 +61,11 @@ export default function Checkout() {
   const paymentMethods = [
     {
       value: "cheque",
-      label: "Cheque",
+      label: "Chèque",
     },
     {
       value: "credit card",
-      label: "Credit card",
+      label: "Carte de crédit",
     },
   ];
 
@@ -86,10 +86,8 @@ export default function Checkout() {
 
     OrderEndpoint.createOrder({
             // @ts-ignore
-
       meals: meals.map((mealItem) => mealItem.item),
             // @ts-ignore
-
       drinks: drinks.map((drinkItem) => drinkItem.item),
       dateCreated: new Date().toISOString(),
       status: OrderStatus.AWAITING,
@@ -114,11 +112,11 @@ export default function Checkout() {
     <div className="bg-background min-h-[75vh] flex items-center justify-center">
       {meals.length + drinks.length === 0 ? (
         <div className="flex flex-col items-center gap-4">
-          <div>Please add products to your card before trying to checkout</div>
+          <div>Veuillez ajouter des produits à votre panier avant de tenter de payer</div>
           <div className="flex gap-2">
-            <Button text="see meals" className="rounded-[4px]" link="/menu" />
+            <Button text="voir les repas" className="rounded-[4px]" link="/menu" />
             <Button
-              text="see drinks"
+              text="voir les boissons"
               className="rounded-[4px]"
               link="/drinks"
             />
@@ -128,9 +126,9 @@ export default function Checkout() {
         <div className="container flex flex-col items-center">
           {meals.length === 0 && (
             <p className="flex gap-1">
-              add a meal before proceeding checkout ?{" "}
+              ajouter un repas avant de procéder au paiement ?{" "}
               <Button
-                text="add meal"
+                text="ajouter un repas"
                 className="hover:no-underline border-none hover:!text-mainText"
                 link="/meals"
                 theme="tertiary"
@@ -139,9 +137,9 @@ export default function Checkout() {
           )}
           {drinks.length === 0 && (
             <p className="flex gap-1">
-              add a drink before proceeding checkout ?{" "}
+              ajouter une boisson avant de procéder au paiement ?{" "}
               <Button
-                text="add drink"
+                text="ajouter une boisson"
                 className="hover:no-underline border-none hover:!text-mainText"
                 link="/drink"
                 theme="tertiary"
@@ -151,39 +149,39 @@ export default function Checkout() {
           <div className="flex gap-10 mt-[7vw]">
             <img
               src="https://i.imgur.com/AGI2Vjx.png"
-              alt="khabiry login page"
+              alt="page de connexion khabiry"
               className="w-[30vw] h-fit sm:w-[48.058vw]"
             />
             <div className="flex w-[41.042vw] flex-col gap-[24px] sm:w-full">
               <div className="grid grid-cols-2 gap-x-2">
                 <FieldPhoneWithCountry
                   control={control}
-                  label="Phone number"
+                  label="Numéro de téléphone"
                   name="phone"
                 />
                 <TextInput
                   control={control}
-                  label="Shipping Address"
+                  label="Adresse de livraison"
                   name="address"
-                  placeholder="Your address*"
+                  placeholder="Votre adresse*"
                 />
                 <DropdownField
                   control={control}
-                  label="Delivery"
+                  label="Livraison"
                   name="delivery"
                   className="bg-white"
                   items={deliveryServices}
                 />
                 <DropdownField
                   control={control}
-                  label="Payment method"
+                  label="Méthode de paiement"
                   className="bg-white"
                   name="paymentMethod"
                   items={paymentMethods}
                 />
                 <Button
                   className="w-full rounded-[8px] col-span-2"
-                  text="checkout"
+                  text="passer la commande"
                   onClick={handleSubmit(onSubmit)}
                 />
               </div>

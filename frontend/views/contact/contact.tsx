@@ -14,15 +14,15 @@ export default function Contact() {
         <div className="flex gap-[3.333vw] sm:flex-col-reverse">
           <div className="flex w-[21.250vw] flex-col items-center gap-[0.972vw] sm:w-[74.272vw]">
             <img src={location} alt="location icon" />
-            <div className="text-center text-cardText">Taounate, Morocco</div>
+            <div className="text-center text-cardText">Eljadida, Morocco</div>
           </div>
           <div className="flex w-[21.250vw] flex-col items-center gap-[0.972vw] sm:w-[74.272vw]">
             <img src={letter} alt="letter icon" />
-            <div className="text-center text-cardText">contact@getfed.com</div>
+            <div className="text-center text-cardText">contact@wajbat.com</div>
           </div>
           <div className="flex w-[21.250vw] flex-col items-center gap-[0.972vw] sm:w-[74.272vw]">
             <img src={phone} alt="phone icon" />
-            <div className="text-center text-cardText">(+212)696788244</div>
+            <div className="text-center text-cardText">(+212)639585214</div>
           </div>
         </div>
         <Form />

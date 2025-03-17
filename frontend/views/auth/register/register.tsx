@@ -19,13 +19,13 @@ import { login } from "@hilla/frontend";
 
 const schema = zod.object({
   firstname: zod.string({
-    required_error: "firstname required",
+    required_error: "prénom requis",
   }),
   lastname: zod.string({
-    required_error: "lastname required",
+    required_error: "nom de famille requis",
   }),
   username: zod.string({
-    required_error: "e-mail required",
+    required_error: "e-mail requis",
   }),
   phone: zod.object({
     countryCode: zod.string(),
@@ -33,13 +33,13 @@ const schema = zod.object({
   }),
   address: zod.optional(zod.string()),
   password: zod.string({
-    required_error: "password required",
+    required_error: "mot de passe requis",
   }),
   repassword: zod.string({
-    required_error: "confirm password required",
+    required_error: "confirmation du mot de passe requise",
   }),
   terms: zod.boolean({
-    required_error: "you should accept terms of use before register ",
+    required_error: "vous devez accepter les conditions d'utilisation avant de vous inscrire",
   }),
 });
 
@@ -54,6 +54,16 @@ export default function Register() {
   const { control, handleSubmit } = useForm<FormValues>({
     mode: "onChange",
     resolver: zodResolver(schema),
+    defaultValues: {
+      firstname: "",
+      lastname: "",
+      username: "",
+      phone: { countryCode: "", phone: "" }, // Nested object needs defaults
+      address: "",
+      password: "",
+      repassword: "",
+      terms: false,
+    },
   });
 
   useEffect(() => {
@@ -82,7 +92,6 @@ export default function Register() {
         lastName: lastname,
         role: "USER",
       })
-
         .then((res) => {
           // @ts-ignore
           return login(res?.username, res?.password).then(() => res);
@@ -105,85 +114,85 @@ export default function Register() {
 
   return (
     <div className="w-full bg-background">
-      <Alert message="Passwords not matched" open={open} status="error" />
+      <Alert message="Les mots de passe ne correspondent pas" open={open} status="error" />
       <div className="container flex items-center py-[48px] sm:flex-col">
         <div className="hidden w-full justify-center sm:flex ">
-          <HeaderTitle title="Sign Up" subTitle="" />
+          <HeaderTitle title="S'inscrire" subTitle="" />
         </div>
         <div className="flex w-[41.042vw] items-center justify-center px-[4.444vw] py-[2.222vw] sm:w-full">
           <img
             src={illustration}
-            alt="khabiry login page"
+            alt="page d'inscription khabiry"
             className="w-[26.319vw] sm:w-[48.058vw]"
           />
         </div>
         <div className="flex w-[41.042vw] flex-col gap-[24px] sm:w-full">
           <div className="mb-[3.472vw] sm:hidden">
-            <HeaderTitle title="Sign up" subTitle="" />
+            <HeaderTitle title="S'inscrire" subTitle="" />
           </div>
           <div className="flex flex-col gap-2">
             <div className="grid grid-cols-2 gap-x-2">
               <TextInput
                 control={control}
-                label="e-mail / username"
+                label="e-mail / nom d'utilisateur"
                 name="username"
-                placeholder="Your username/e-mail*"
+                placeholder="Votre nom d'utilisateur/e-mail*"
               />
               <TextInput
                 control={control}
-                label="fistname"
+                label="prénom"
                 name="firstname"
-                placeholder="Your firstname*"
+                placeholder="Votre prénom*"
               />
               <TextInput
                 control={control}
-                label="lastname"
+                label="nom de famille"
                 name="lastname"
-                placeholder="Your lastname*"
+                placeholder="Votre nom de famille*"
               />
               <FieldPhoneWithCountry
                 control={control}
-                label="phone"
+                label="téléphone"
                 name="phone"
               />
               <TextInput
                 control={control}
-                label="address"
+                label="adresse"
                 name="address"
-                placeholder="Your address*"
+                placeholder="Votre adresse*"
               />
               <TextInput
                 control={control}
-                label="password"
+                label="mot de passe"
                 name="password"
                 type="password"
-                placeholder="Your password*"
+                placeholder="Votre mot de passe*"
               />
               <TextInput
                 control={control}
-                label="confirm password"
+                label="confirmer le mot de passe"
                 name="repassword"
                 type="password"
-                placeholder="Repeat password*"
+                placeholder="Répéter le mot de passe*"
               />
             </div>
             <CheckboxField
               control={control}
-              label="By registring I accept get-fed terms of use."
+              label="En m'inscrivant, j'accepte les conditions d'utilisation de Wajbat."
               name="terms"
             />
             <div className="w-full flex justify-end">
               <Button
                 className="w-fit"
-                text="sign up"
+                text="s'inscrire"
                 onClick={handleSubmit(onSubmit)}
               />
             </div>
 
             <div className="w-[100%] text-center text-xs font-medium text-[#B7B7B7] sm:text-mb-xxs">
-              You already have an account?
+              Vous avez déjà un compte ?
               <Link to="/login" className="text-secondary">
-                &nbsp; Log in
+                  Se connecter
               </Link>
             </div>
           </div>

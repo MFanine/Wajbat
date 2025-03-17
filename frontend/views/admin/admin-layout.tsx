@@ -11,27 +11,27 @@ function AdminLayout() {
     {
       id: 1,
       link: "/admin/board",
-      label: "Dashboard",
+      label: "Tableau de bord", // "Dashboard"
     },
     {
       id: 2,
       link: "/admin/managements",
-      label: "Management",
+      label: "Gestion", // "Management"
     },
     {
       id: 3,
       link: "/admin/orders",
-      label: "Orders",
+      label: "Commandes", // "Orders"
     },
     {
       id: 4,
       link: "/admin/users",
-      label: "Manage users",
+      label: "Gérer les utilisateurs", // "Manage users"
     },
     {
       id: 6,
       link: "/admin/security",
-      label: "Update password",
+      label: "Mettre à jour le mot de passe", // "Update password"
     },
   ];
 

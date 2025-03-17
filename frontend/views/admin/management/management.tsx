@@ -8,22 +8,22 @@ export default function Management() {
   const tabs = [
     {
       id: 1,
-      label: "meals",
+      label: "Repas",
       link: "/admin/managements/meals",
     },
     {
       id: 2,
-      label: "drinks",
+      label: "Boissons", 
       link: "/admin/managements/drinks",
     },
     {
       id: 3,
-      label: "sub categories",
+      label: "Sous-catégories",
       link: "/admin/managements/subcategories",
     },
     {
       id: 4,
-      label: "ingredients",
+      label: "Ingrédients",
       link: "/admin/managements/ingredients",
     },
   ];
@@ -39,7 +39,7 @@ export default function Management() {
           <NoStyleLink
             key={`managements-tabs-${tab.id}`}
             className="relative block h-full rounded-ss-[8px] rounded-se-[8px] whitespace-nowrap p-[1vw]"
-            activeClassName="prose-em:block bg-white tab-link-active text-[#2D54DE]  font-normal sm:border-l-0 sm:border-b-[4px]"
+            activeClassName="prose-em:block bg-white tab-link-active text-[#2D54DE] font-normal sm:border-l-0 sm:border-b-[4px]"
             link={tab.link}
           >
             <em className="hidden absolute w-[24px] h-[24px] left-[-24px] bottom-0 bg-white" />

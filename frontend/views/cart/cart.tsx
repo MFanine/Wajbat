@@ -21,16 +21,16 @@ export default function Cart() {
   return (
     <div className="bg-mainText bg-[url('https://i.imgur.com/D1FTJJD.png')] bg-no-repeat bg-cover min-h-[700px] flex flex-col items-center">
       <div className="my-12 py-6 w-[70vw] p-3 bg-white rounded-[8px] shadow-lg">
-        <HeaderTitle title="My Cart" />
+        <HeaderTitle title="Mon Panier" />
         {filteredMeals.length === 0 && filteredDrinks.length === 0 ? (
-          <Alert message="You haven't added any item to you cart yet" />
+          <Alert message="Vous n'avez pas encore ajouté d'article à votre panier" />
         ) : (
           <div className="">
             <div className="font-bold text-xbase text-mainText underline mb-6">
-              Meals:
+              Repas :
             </div>
             {filteredMeals.length === 0 ? (
-              <Alert message="You haven't added any meal to your card" />
+              <Alert message="Vous n'avez ajouté aucun repas à votre panier" />
             ) : (
               <ul className="grid grid-cols-2 gap-2">
                 {filteredMeals?.map((meal) => (
@@ -43,10 +43,10 @@ export default function Cart() {
               </ul>
             )}
             <div className="font-bold text-xbase text-mainText underline my-6">
-              Drinks:
+              Boissons :
             </div>
             {filteredDrinks.length === 0 ? (
-              <Alert message="You haven't added any drink to your card" />
+              <Alert message="Vous n'avez ajouté aucune boisson à votre panier" />
             ) : (
               <ul className="grid grid-cols-2 gap-2">
                 {filteredDrinks.map((drink) => (
@@ -59,7 +59,7 @@ export default function Cart() {
               </ul>
             )}
             <div className="flex mt-5 w-full justify-end">
-              <Button text="complete order" link="/checkout" />
+              <Button text="finaliser la commande" link="/checkout" />
             </div>
           </div>
         )}

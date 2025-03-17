@@ -3,7 +3,7 @@ export default function Error({ props }: any) {
   return (
     <div className="h-[80vh] flex justify-center items-center bg-background">
       <div className="w-[70vw] text-xl text-mainText text-center">
-        You don't have access to this route.
+      Vous n'avez pas accès à cet itinéraire.
       </div>
     </div>
   );

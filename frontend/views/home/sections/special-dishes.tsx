@@ -19,7 +19,7 @@ export function SpecialDishes() {
 
   return (
     <div className="py-[2.361vw]">
-      <HeaderTitle title="Our Special dishes" />
+      <HeaderTitle title="Nos plats spéciaux" />
       <div className="grid grid-cols-3 gap-[20px]">
         {data?.map((meal) => (
           <DishCard

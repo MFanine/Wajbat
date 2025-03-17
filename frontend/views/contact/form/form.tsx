@@ -11,24 +11,24 @@ import { FieldPhoneWithCountry } from "Frontend/common/form-fields/field-phone-w
 
 const schema = zod.object({
   firstname: zod.string({
-    required_error: "Firstname required",
+    required_error: "Prénom requis",
   }),
   lastname: zod.string({
-    required_error: "Lastname required",
+    required_error: "Nom de famille requis",
   }),
   email: zod
     .string({
-      required_error: "email required",
+      required_error: "Email requis",
     })
-    .email("email format not valid: example@mail.com"),
+    .email("Format d'email non valide : exemple@mail.com"),
   phone: zod.string({
-    required_error: "phone number required",
+    required_error: "Numéro de téléphone requis",
   }),
   help: zod.string({
-    required_error: "Message required",
+    required_error: "Message requis",
   }),
   terms: zod.boolean({
-    required_error: "you must accept terms of use to contact support",
+    required_error: "Vous devez accepter les conditions d'utilisation pour contacter le support",
   }),
 });
 
@@ -47,8 +47,8 @@ export function Form() {
 
   const onSubmit = (data: FormValues) => {
     setAlert((prev) => !prev);
-    console.log("data", data);
-    console.log("alert", alert);
+    console.log("données", data);
+    console.log("alerte", alert);
   };
 
   const [alert, setAlert] = useState<boolean>(false);
@@ -56,29 +56,29 @@ export function Form() {
   return (
     <div className="flex items-center gap-[4.444vw] sm:w-full sm:flex-col">
       <Alert
-        message="We will process your request and email you when possible"
+        message="Nous traiterons votre demande et vous enverrons un email dès que possible"
         status="success"
         open={alert}
       />
       <img
         src={illustration}
-        alt="get fed contact page"
+        alt="page de contact get fed"
         className="w-[352.86] sm:w-[43.689vw]"
       />
       <div className="flex flex-col gap-[1.667vw] sm:w-full">
         <div className="flex gap-[2.222vw] sm:flex-col">
           <TextInput
             control={control}
-            label="Name"
+            label="Prénom"
             name="firstname"
-            placeholder="Your name?"
+            placeholder="Votre prénom ?"
             className=""
           />
           <TextInput
             control={control}
-            label="Lastname"
+            label="Nom de famille"
             name="lastname"
-            placeholder="your lastname?"
+            placeholder="Votre nom de famille ?"
             className=""
           />
         </div>
@@ -87,12 +87,12 @@ export function Form() {
             control={control}
             label="E-mail"
             name="email"
-            placeholder="Your E-mail address"
+            placeholder="Votre adresse e-mail"
             className=""
           />
           <FieldPhoneWithCountry
             control={control}
-            label="Phone"
+            label="Téléphone"
             name="phone"
             className=""
           />
@@ -100,9 +100,9 @@ export function Form() {
         <div className="flex gap-[2.222vw] sm:flex-col">
           <TextAreaField
             control={control}
-            label="Help"
+            label="Aide"
             name="help"
-            placeholder="How can we help you?"
+            placeholder="Comment pouvons-nous vous aider ?"
             className="w-[100%]"
             maxLength={1000}
           />
@@ -111,11 +111,11 @@ export function Form() {
           <CheckboxField
             name="terms"
             control={control}
-            label="I accept the terms of use"
+            label="J'accepte les conditions d'utilisation"
             checked
           />
           <Button
-            text="Send"
+            text="Envoyer"
             className="w-fit sm:w-full"
             onClick={handleSubmit(onSubmit)}
           />

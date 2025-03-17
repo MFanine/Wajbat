@@ -51,7 +51,7 @@ export function TableRow({ item }: Props) {
             </div>
             <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
               <div className="min-w-[18.204vw] font-bold text-cardText">
-                Status
+                Statut
               </div>
               <div
                 className={ClassNames(
@@ -71,34 +71,34 @@ export function TableRow({ item }: Props) {
             </div>
             <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
               <div className="min-w-[18.204vw] font-bold text-cardText">
-                Delivery
+                Livraison
               </div>
               <div className="text-[#A6A6A6]">
-                will be delivered at: {item.delivery?.estimateTime} min for{" "}
-                {item.delivery?.price} Mad, by {item.delivery?.label}
+                sera livrée dans : {item.delivery?.estimateTime} min pour{" "}
+                {item.delivery?.price} Mad, par {item.delivery?.label}
               </div>
             </div>
             <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
               <div className="min-w-[18.204vw] font-bold text-cardText">
-                Price
+                Prix
               </div>
               <div className="text-[#A6A6A6]">{item.totalPrice} Mad</div>
             </div>
             <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
               <div className="min-w-[18.204vw] font-bold text-cardText">
-                Shipping address:
+                Adresse de livraison :
               </div>
               <div className="text-[#A6A6A6]">{item.address}</div>
             </div>
             <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
               <div className="min-w-[18.204vw] font-bold text-cardText">
-                Phone:
+                Téléphone :
               </div>
               <div className="text-[#A6A6A6]">{item.phone}</div>
             </div>
             <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
               <div className="min-w-[18.204vw] font-bold text-cardText">
-                Placed By:
+                Commandé par :
               </div>
               <div className="text-[#A6A6A6]">
                 {`${item.user?.firstName} ${item.user?.lastName}`}

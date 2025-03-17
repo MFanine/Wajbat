@@ -12,19 +12,19 @@ import User from "Frontend/generated/com/lpw/getfed/models/User.js";
 import { UserEndpoint } from "Frontend/generated/endpoints.js";
 
 export default function UserManagement() {
-  const header = ["name", "username", "role", "address", "phone"];
+  const header = ["nom", "nom d'utilisateur", "rôle", "adresse", "téléphone"];
 
   const { data, loading, error } = useFetch<User[]>(async () => {
     return await UserEndpoint.getPageUsers(0).then((res) => res);
   }, []);
 
   if (loading) return <ComponentLoader />;
-  if (error) return <Alert message="fetching users fialed" status="error" />;
+  if (error) return <Alert message="la récupération des utilisateurs a échoué" status="error" />;
 
   return (
     <div className="flex w-full flex-col gap-[32px] rounded-[8px] bg-white p-[2.222vw] sm:p-0">
       <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
-        Users
+      Utilisateurs
       </div>
       <div className="w-full min-h-[50vh]">
         {data && <UserDataTable header={header} data={data} />}

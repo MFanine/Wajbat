@@ -4,26 +4,26 @@ export function Services() {
   const services = [
     {
       id: 1,
-      img: "https://i.imgur.com/9z1P1uE.png",
-      name: "Best Taste",
+      img: "https://www.kraftheinz.com/en-NZ/good-taste-company",
+      name: "Meilleur Goût",
       description:
-        "we offer the best taste in the town by the statement of our beloved clients.",
+        "nous offrons le meilleur goût de la ville selon les déclarations de nos précieux clients.",
     },
     {
       id: 2,
       img: "https://i.imgur.com/7QAsPM2.png",
-      name: "Fast Delivery",
+      name: "Livraison Rapide",
       description:
-        "we have two delivery services to get your order as fast as we possibly can.",
+        "nous disposons de deux services de livraison pour vous livrer votre commande aussi vite que possible.",
     },
     {
       id: 3,
       img: "https://i.imgur.com/rlU36S8.png",
-      name: "Great Service",
+      name: "Excellent Service",
       description:
-        "we try to offer the best service, as we always work on the user experience and try to improve upon that ",
+        "nous essayons d'offrir le meilleur service, en travaillant constamment sur l'expérience utilisateur et en cherchant à l'améliorer.",
     },
-  ];
+];
 
   return (
     <div className="flex justify-between w-[73.056vw]">

@@ -7,19 +7,19 @@ export function Home() {
     <main className="bg-background bg-[url('https://i.imgur.com/o1oOjuM.png')] w-full bg-no-repeat bg-cover overflow-x-hidden">
       <div className="container flex flex-col gap-[2.361vw] items-center">
         <div className="flex items-center justify-between">
-          <div className="w-[45vw] flex flex-col gap-[24px]">
+          <div className="w-[50vw] flex flex-col gap-[24px]">
             <h1 className="font-extrabold text-[4.167vw]">
-              We make the best taste in town
+            Nous faisons le meilleur goût en ville
             </h1>
             <p className="font-[300]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-              consequatur fuga incidunt iste, iusto laboriosam odio qui quo vel
-              voluptatibus! Cumque, sed, temporibus. Animi dicta dolorem eaque
-              in itaque quo!
+              A web app for Moroccan meal management in Darija. Plan weekly
+              menus, get Moroccan recipe ideas (tanjia, couscous), and track
+              ingredients. Simplify your kitchen, l-Mghribi style. Contributions
+              welcome—let’s cook something mzyan together!
             </p>
             <div className="flex gap-[1.667vw]">
-              <Button text="order now" link="/menu" />
-              <Button text="about us" link="/about" theme="secondary" />
+              <Button text="commandez maintenant" link="/menu" />
+              <Button text="à propos de nous" link="/about" theme="secondary" />
             </div>
           </div>
           <img src={img} alt="get fed" />

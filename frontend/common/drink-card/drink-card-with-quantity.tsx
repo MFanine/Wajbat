@@ -33,7 +33,7 @@ export function DrinkCardWithQuantity(props: {
               Mad
             </div>
             <div className="px-5 py-2 bg-secondary text-white rounded-[4px]">
-              Quantity: {props.drink.qte}
+            Quantité: {props.drink.qte}
             </div>
           </div>
         </div>

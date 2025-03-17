@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import logo from "Frontend/assets/images/logo.svg";
+import logo from "Frontend/assets/images/qq.png";
 import { ClassNames } from "Frontend/utils/classnames.js";
 import { useEffect, useRef, useState } from "react";
 import profile from "Frontend/assets/icons/profile.svg";
@@ -15,7 +15,7 @@ export function Header() {
   const headerLinks = [
     {
       id: 1,
-      label: "Home",
+      label: "Accueil",
       link: "/",
     },
     {
@@ -25,17 +25,17 @@ export function Header() {
     },
     {
       id: 3,
-      label: "Drink",
+      label: "Boissons",
       link: "/drink",
     },
     // {
     //   id: 4,
-    //   label: "Offers",
+    //   label: "Offres",
     //   link: "/offers",
     // },
     {
       id: 5,
-      label: "About",
+      label: "À propos",
       link: "/about",
     },
   ];
@@ -98,7 +98,7 @@ export function Header() {
             className="px-[32px] py-[7px] rounded-[50px] bg-main text-white"
             to="/custom-meal"
           >
-            Customize Meal
+            Personnaliser un repas
           </Link>
           <div
             className="profile-dropdown relative hover:after:block"
@@ -108,7 +108,7 @@ export function Header() {
               <img
                 className="w-[2.431vw] sm:w-[8.495vw]"
                 src={profile}
-                alt="language"
+                alt="profil"
               />
             </div>
             <div
@@ -131,7 +131,7 @@ export function Header() {
                   link="/logout"
                   className="py-2 px-1 hover:bg-main transition hover:text-white"
                 >
-                  Logout
+                  Déconnexion
                 </NoStyleLink>
               ) : (
                 <>
@@ -139,13 +139,13 @@ export function Header() {
                     link="/login"
                     className="group py-2 px-1 transition hover:bg-main hover:text-white"
                   >
-                    Log in
+                    Se connecter
                   </NoStyleLink>
                   <NoStyleLink
                     link="/register"
                     className="group py-2 px-1 hover:bg-main transition hover:text-white"
                   >
-                    Sign up
+                    S'inscrire
                   </NoStyleLink>
                 </>
               )}

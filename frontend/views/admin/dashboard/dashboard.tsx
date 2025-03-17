@@ -13,24 +13,24 @@ export default function Dashboard() {
   const cards = [
     {
       id: 1,
-      title: "Orders",
+      title: "Commandes", 
       value: statistics.orders,
       link: "/admin/orders",
-      linkText: "See orders",
+      linkText: "Voir les commandes", 
     },
     {
       id: 2,
-      title: "Meals",
+      title: "Repas", 
       value: statistics.meals,
       link: "/admin/managements",
-      linkText: "Manage meals, drinks and sub categories",
+      linkText: "Gérer les repas, boissons et sous-catégories", 
     },
     {
       id: 3,
-      title: "Users",
+      title: "Utilisateurs",
       value: statistics.users,
       link: "/admin/users",
-      linkText: "Manage users",
+      linkText: "Gérer les utilisateurs", 
     },
   ];
 
@@ -50,7 +50,7 @@ export default function Dashboard() {
   return (
     <div className="flex w-full flex-col gap-[32px] rounded-[8px] bg-white p-[2.222vw] sm:p-0">
       <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
-        Dashboard
+        Tableau de bord
       </div>
       <div className="flex justify-between gap-[24px] sm:flex-col">
         {cards.map((item) => (

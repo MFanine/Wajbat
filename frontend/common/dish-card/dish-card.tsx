@@ -59,7 +59,7 @@ export function DishCard({
       </div>
       <div className="flex mt-[20px] justify-end items-center gap-[10px] w-[100%]">
         <Button
-          text="see details"
+          text="voir les détails"
           link={`/meal/${id}`}
           theme="tertiary"
           className=""
@@ -69,7 +69,7 @@ export function DishCard({
           className="px-[18px] py-[3px] transition-all ease-in delay-75 flex items-center border-[1px] border-main gap-[4px] bg-main rounded-[50px] text-white hover:text-main hover:bg-[transparent]"
         >
           <FaCartPlus size={24} />
-          add to cart
+          Ajouter au panier
         </button>
       </div>
     </div>

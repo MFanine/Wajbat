@@ -41,7 +41,7 @@ export default function MealDetails() {
               <h1 className="text-main text-xxl font-bold capitalize">
                 {data?.title}
               </h1>
-              <div className="">Price: {data?.price}</div>
+              <div className="">Prix: {data?.price} Mad</div>
               <div className="flex gap-2 items-center">
                 Rating: <StartRating rating={data?.rating || 0} />{" "}
               </div>
@@ -51,13 +51,13 @@ export default function MealDetails() {
                 className="w-[30vw]"
               />
               <div>
-                see similar to:{" "}
+              voir similaire à :{" "}
                 <Link to={`/menu/${data?.category}`}>
                   {data?.category?.label || "Hello world"}
                 </Link>{" "}
               </div>
               <div className="text-mainText text-xbase my-6">
-                Are you looking for a drink ?
+              Vous cherchez une boisson ?
               </div>
               <div className="overflow-hidden max-w-[50vw]">
                 <DrinksSlider number={3} />
@@ -65,7 +65,7 @@ export default function MealDetails() {
             </div>
             <button className="px-[18px] h-fit py-[3px] transition-all min-w-fit whitespace-nowrap ease-in delay-75 flex items-center border-[1px] border-main gap-[4px] bg-main rounded-[50px] text-white hover:text-main hover:bg-[transparent]">
               <FaCartPlus size={24} />
-              add to cart
+              Ajouter au panier
             </button>
           </div>
         </div>

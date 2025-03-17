@@ -13,12 +13,12 @@ export default function Orders() {
 
   if (loading) return <ComponentLoader />;
   if (error)
-    return <Alert message="error getting orders history" status="error" />;
+    return <Alert message="erreur lors de l'obtention de l'historique des commandes" status="error" />;
 
   return (
     <div className="flex w-full flex-col gap-[32px] rounded-[8px] bg-white p-[2.222vw] sm:p-0">
       <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
-        Orders
+        Commandes
       </div>
       <div className="">
         <ul className="">
