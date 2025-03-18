@@ -168,12 +168,12 @@ export const routes: readonly ViewRouteObject[] = [
       {
         path: "/",
         element: <Home />,
-        handle: { icon: "globe-solid", title: "Get Fed | order foods online" },
+        handle: { icon: "globe-solid", title: "Wajbat | order foods online" },
       },
       {
         path: "/about",
         element: <About />,
-        handle: { icon: "globe-solid", title: "Get Fed | About us" },
+        handle: { icon: "globe-solid", title: "Wajbat | About us" },
       },
       {
         path: "/menu",
