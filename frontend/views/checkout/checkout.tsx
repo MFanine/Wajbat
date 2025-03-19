@@ -146,11 +146,11 @@ export default function Checkout() {
               />{" "}
             </p>
           )}
-          <div className="flex gap-10 mt-[7vw]">
+          <div className="flex gap-24 mt-[7vw]">
             <img
-              src="https://i.imgur.com/AGI2Vjx.png"
+              src="https://cdn.dribbble.com/userupload/28745158/file/original-3beaedcdf1950ef3ed45077548dad0dd.gif"
               alt="page de connexion khabiry"
-              className="w-[30vw] h-fit sm:w-[48.058vw]"
+              className="w-[30vw] h-fit sm:w-[48.058vw] rounded-2xl"
             />
             <div className="flex w-[41.042vw] flex-col gap-[24px] sm:w-full">
               <div className="grid grid-cols-2 gap-x-2">

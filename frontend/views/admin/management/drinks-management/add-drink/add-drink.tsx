@@ -36,11 +36,11 @@ export default function AddDrink() {
     <form className="py-10">
       <div className="flex gap-2">
         <TextInput
-          label="Label"
+          label="Libellé"
           className=""
           inputClassName="bg-background"
           control={control}
-          placeholder="drink label?"
+          placeholder="Libellé de la boisson ?"
           name="label"
         />
         <UploadFile name="image" control={control}>
@@ -49,7 +49,7 @@ export default function AddDrink() {
               Image
             </div>
             <div className="bg-[#444C56] w-[35vw] flex justify-center transition-all ease-in delay-75 py-[11px] rounded-[8px] text-white hover:bg-[#22272E] ">
-              select photo
+              Sélectionner une photo
             </div>
           </div>
         </UploadFile>
@@ -65,14 +65,14 @@ export default function AddDrink() {
       <div className="flex gap-2 items-center">
         <TextInput
           type="number"
-          label="Price"
+          label="Prix"
           className=""
           inputClassName="bg-background"
           control={control}
           name="price"
         />
         <Button
-          text="save meal"
+          text="Enregistrer le plat"
           className="rounded-[8px] w-[65vw] py-[11px] h-fit"
           onClick={handleSubmit(onSubmit)}
         />

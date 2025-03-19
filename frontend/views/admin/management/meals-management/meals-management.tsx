@@ -13,14 +13,14 @@ export default function MealsManagement() {
   }, []);
 
   const header = [
-    "title",
-    "description",
-    "date created",
-    "price",
-    "rating",
-    "category",
-    "#",
-  ];
+"titre",
+"description",
+"date de création",
+"prix",
+"note",
+"catégorie",
+"#",
+];
 
   if (loading) return <ComponentLoader />;
   if (error) return <Alert message="error getting meals" status="error" />;
@@ -28,7 +28,7 @@ export default function MealsManagement() {
   return (
     <div className="">
       <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
-        Meals
+      Repas
       </div>
       <div className="w-full">
         <div className="my-3">
@@ -36,7 +36,7 @@ export default function MealsManagement() {
             className="bg-main px-[32px] transition-all ease-in delay-75 py-[7px] border-[1px] rounded-full border-main text-white hover:text-main hover:bg-[transparent]"
             link="/admin/managements/meals/new"
           >
-            add meal
+            ajouter un repas
           </NoStyleLink>
         </div>
 

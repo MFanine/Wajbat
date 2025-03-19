@@ -10,7 +10,7 @@ export function ComponentLoader({ className }: Props) {
     <div
       className={ClassNames("w-full h-full text-main flex justify-center py-6")}
     >
-      <PacmanLoader color="#FF385C" />
+      <PacmanLoader color="#007f5f" />
     </div>
   );
 }

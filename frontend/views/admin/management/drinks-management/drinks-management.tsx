@@ -14,15 +14,15 @@ export default function DrinksManagement() {
     return await DrinkEndpoint.getDrinks(0, 20);
   }, []);
 
-  const header = ["title", "description", "price", "#"];
+  const header = ["titre", "description", "prix", "#"];
 
   if (loading) return <ComponentLoader />;
-  if (error) return <Alert message="error getting drinks" status="error" />;
+  if (error) return <Alert message="Erreur lors de la récupération des boissons" status="error" />;
 
   return (
     <div className="">
       <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
-        Drinks
+        Boissons
       </div>
       <div className="w-full">
         <div className="my-3">
@@ -30,7 +30,7 @@ export default function DrinksManagement() {
             className="bg-main px-[32px] transition-all ease-in delay-75 py-[7px] border-[1px] rounded-full border-main text-white hover:text-main hover:bg-[transparent]"
             link="/admin/managements/drinks/new"
           >
-            add drink
+            Ajouter une boisson
           </NoStyleLink>
         </div>
 

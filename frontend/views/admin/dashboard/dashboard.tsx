@@ -69,11 +69,11 @@ export default function Dashboard() {
             </div>
             <div className="flex items-center justify-between text-secondary">
               <div className="sm:text-mb-xbase">{item.linkText}</div>
-              <img
-                src="https://i.imgur.com/fgTg5Kk.png"
+              {/* <img
+                src="https://brandeps.com/icon-download/T/Text-grammar-arrow-right-icon-vector-01.svg"
                 alt="arrow right"
                 className="min-w-[1.667vw] sm:w-[5.825vw]"
-              />
+              /> */}
             </div>
           </NoStyleLink>
         ))}

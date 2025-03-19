@@ -4,21 +4,22 @@ export function Services() {
   const services = [
     {
       id: 1,
-      img: "https://www.kraftheinz.com/en-NZ/good-taste-company",
+      img: "https://media.licdn.com/dms/image/v2/C5612AQEaHbOu5lIheQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520091725817?e=1747872000&v=beta&t=A7Cb1R4SSMdkjpP9axDRAF4RaPZps28t7jKuwBmBohQ",
       name: "Meilleur Goût",
       description:
         "nous offrons le meilleur goût de la ville selon les déclarations de nos précieux clients.",
     },
     {
       id: 2,
-      img: "https://i.imgur.com/7QAsPM2.png",
+      img: "https://media.licdn.com/dms/image/v2/C5612AQEaHbOu5lIheQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520091725817?e=1747872000&v=beta&t=A7Cb1R4SSMdkjpP9axDRAF4RaPZps28t7jKuwBmBohQ",
+      // img: "https://cdn.myonlinestore.eu/94265583-6be1-11e9-a722-44a8421b9960/images/Verzendinfo%20Levering.jpg",
       name: "Livraison Rapide",
       description:
         "nous disposons de deux services de livraison pour vous livrer votre commande aussi vite que possible.",
     },
     {
       id: 3,
-      img: "https://i.imgur.com/rlU36S8.png",
+      img: "https://media.licdn.com/dms/image/v2/C5612AQEaHbOu5lIheQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520091725817?e=1747872000&v=beta&t=A7Cb1R4SSMdkjpP9axDRAF4RaPZps28t7jKuwBmBohQ",
       name: "Excellent Service",
       description:
         "nous essayons d'offrir le meilleur service, en travaillant constamment sur l'expérience utilisateur et en cherchant à l'améliorer.",
